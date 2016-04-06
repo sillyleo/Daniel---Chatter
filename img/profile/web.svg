@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="關於我" sketch:type="MSArtboardGroup" transform="translate(-16.000000, -451.000000)" fill="#000000" opacity="0.87">
+            <path d="M21.8,456 C22.7,454.9 23.9,454 25.2,453.5 C24.9,454.2 24.7,455.1 24.5,456 L26.6,456 C27,454 27.7,453 28,453 C28.3,453 29,454 29.5,456 L31.6,456 C31.4,455.1 31.2,454.2 30.8,453.5 C32.1,454 33.3,454.9 34.2,456 L36.6,456 C34.9,453 31.6,451 28,451 C24.4,451 21.1,453 19.4,456 L21.8,456 Z M34.2,466 C33.3,467.1 32.1,468 30.8,468.5 C31.1,467.8 31.4,466.9 31.6,466 L29.5,466 C29,468 28.4,469 28,469 C27.6,469 27,468 26.5,466 L24.5,466 C24.7,466.9 24.9,467.8 25.3,468.5 C23.9,468 22.7,467.1 21.8,466 L19.4,466 C21.1,469 24.4,471 28,471 C31.6,471 34.9,469 36.6,466 L34.2,466 Z M21,461.8 L21.6,458 L23,458 L21.7,464 L20.4,464 L19.6,460.5 L18.7,464 L17.3,464 L16,458 L17.4,458 L18.1,461.8 L18.9,458 L20.1,458 L21,461.8 Z M29.4,461.8 L30.1,458 L31.5,458 L30.2,464 L28.8,464 L28,460.5 L27.2,464 L25.7,464 L24.5,458 L25.9,458 L26.6,461.8 L27.4,458 L28.6,458 L29.4,461.8 Z M37.9,461.8 L38.6,458 L40,458 L38.7,464 L37.3,464 L36.5,460.5 L35.7,464 L34.3,464 L33,458 L34.4,458 L35.1,461.8 L35.9,458 L37.1,458 L37.9,461.8 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

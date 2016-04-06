@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+.filter {
+	display: none;
+}
+
+.unit {
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	display: flex;
+}
+
+.content {
+	flex-grow:1;
+}
+
+.people {
+	display: flex;
+  justify-content: space-between;
+	background: yellow;
+	.name {
+		background: blue;
+	}
+	.timestamp {
+		background: red;
+	}
+}
+
+.avatar {
+	img {
+		width: 38px;
+		height: 38px;
+		border-radius: 3px;
+	}
+}

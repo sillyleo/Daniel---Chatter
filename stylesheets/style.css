@@ -1,0 +1,45 @@
+/* line 1, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* line 8, ../sass/style.scss */
+.filter {
+  display: none;
+}
+
+/* line 12, ../sass/style.scss */
+.unit {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+/* line 17, ../sass/style.scss */
+.content {
+  flex-grow: 1;
+}
+
+/* line 21, ../sass/style.scss */
+.people {
+  display: flex;
+  justify-content: space-between;
+  background: yellow;
+}
+/* line 25, ../sass/style.scss */
+.people .name {
+  background: blue;
+}
+/* line 28, ../sass/style.scss */
+.people .timestamp {
+  background: red;
+}
+
+/* line 34, ../sass/style.scss */
+.avatar img {
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}

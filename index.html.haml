@@ -1,0 +1,36 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => "utf-8" }/
+    %title 聊天列表介面
+    %meta{ :name => "description", :content => "" }/
+    %meta{ :name => "author", :content => "" }/
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+    %link{ :rel => "stylesheet", :href => "stylesheets/style.css"}/
+
+  %body
+    #chat-list
+      .filter
+        %a 全部
+        %a 買東西
+        %a 賣東西
+      - 9.times do
+        .unit
+          .avatar
+            %img{:src => "img/avatar/a#{1 + rand(21)}.jpg"}/
+          .content
+            .people
+              .name
+                = zh_lorem_name
+              .timestamp
+                = lorem_date("%m 月 %d 日")
+
+            .text
+              = zh_lorem_sentences(2)
+            .extra #12345
+
+    -# end of #chat-list
+    
+    -# Live Reload
+    = livereload_js if ENV["RACK_ENV"] != "production"
+
