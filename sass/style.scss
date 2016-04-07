@@ -47,7 +47,7 @@ a {
 	color: $light;
 }
 
-.filter {
+input.filter {
 	text-align: center;
 	border: 1px solid rgba(0,0,0,0.1);
 	font-size: $base * 0.9;
@@ -181,12 +181,16 @@ a {
 .message-box {
 	position: fixed;
 	height: 3 * $base;
-	line-height: 1.5em;
-	padding: 0.5em 5px;
 	bottom: 0;
 	width: 100%;
 	background: white;
 	border-top: 1px solid rgba(0,0,0,0.1);
+	textarea {
+		width: 100%;
+		background: red;
+		line-height: 1.5em;
+		padding: 0.5em 5px;
+	}
 }
 
 .search, .chat-title {
