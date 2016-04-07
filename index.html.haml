@@ -6,28 +6,86 @@
     %meta{ :name => "description", :content => "" }/
     %meta{ :name => "author", :content => "" }/
     %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+    / material icons
+    %link{ :rel => "stylesheet", :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}/
     %link{ :rel => "stylesheet", :href => "stylesheets/style.css"}/
 
   %body
     #chat-list
-      .filter
-        %a 全部
-        %a 買東西
-        %a 賣東西
-      - 9.times do
+      .nav
+        .left-col
+          -# 可以過濾訊息類型
+          %a.active{:href => "#"} 全部
+          %a{:href => "#"} 買東西
+          %a{:href => "#"} 賣東西
+        .mid-col
+        .right-col  
+      .search
+        %input.filter{:placeholder => "搜尋訂單編號", :type => "search"}/
+
+      -# 示範未讀訊息
+      .unit.unread
+        .avatar
+          .wrapper
+            %img{:src => "img/avatar/a#{1 + rand(21)}.jpg"}/
+        %a.content{:href => "message.html"}
+          .people
+            .name
+              = zh_lorem_name
+            .timestamp
+              = lorem_date("%m/%d")
+
+          .text
+            = zh_lorem_sentences(2)
+          .extra 訂單 #12345
+      -# 示範未讀訊息
+      .unit.unread
+        .avatar
+          .wrapper
+            %img{:src => "img/avatar/a#{1 + rand(21)}.jpg"}/
+        %a.content{:href => "message.html"}
+          .people
+            .name
+              = zh_lorem_name
+            .timestamp
+              = lorem_date("%m/%d")
+
+          .text
+            = zh_lorem_sentences(2)
+          .extra 訂單 #12345
+
+      - 28.times do
+        -# 示範不同的聊天室標題（訂單）
         .unit
           .avatar
-            %img{:src => "img/avatar/a#{1 + rand(21)}.jpg"}/
-          .content
+            .wrapper
+              %img{:src => "img/avatar/a#{1 + rand(21)}.jpg"}/
+          %a.content{:href => "message.html"}
             .people
               .name
                 = zh_lorem_name
               .timestamp
-                = lorem_date("%m 月 %d 日")
+                = lorem_date("%m/%d")
 
             .text
               = zh_lorem_sentences(2)
-            .extra #12345
+            .extra 訂單 #12345
+
+        -# 示範不同的聊天室標題（商品）
+        .unit
+          .avatar
+            .wrapper
+              %img{:src => "img/avatar/a#{1 + rand(21)}.jpg"}/
+          %a.content{:href => "message.html"}
+            .people
+              .name
+                = zh_lorem_name
+              .timestamp
+                = lorem_date("%m/%d")
+
+            .text
+              = zh_lorem_sentences(2)
+            .extra 關於「聖經好讀版」
 
     -# end of #chat-list
     

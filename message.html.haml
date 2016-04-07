@@ -1,0 +1,47 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => "utf-8" }/
+    %title 聊天列表介面
+    %meta{ :name => "description", :content => "" }/
+    %meta{ :name => "author", :content => "" }/
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+    / material icons
+    %link{ :rel => "stylesheet", :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}/
+    %link{ :rel => "stylesheet", :href => "stylesheets/style.css"}/
+
+  %body
+    #chat-list.fixed
+      .nav
+        .left-col
+          -# 可以過濾訊息類型
+          %a{:href => "/"} 回上頁
+        .mid-col
+        .right-col  
+      .chat-title
+        %a{:href => "#"} 關於「聖經好讀版」（或顯示訂單編號）
+    #chat-content
+      -# 聊天內容
+      - 30.times do
+        .me
+          .message-text
+            = zh_lorem_sentences(2)
+          .message-text
+            = zh_lorem_sentences(2)
+          - #.message.photo
+
+        .friend
+          .message-text
+            = zh_lorem_sentences(2)
+          .message-text
+            = zh_lorem_sentences(1)
+          - #.message-photo
+    .message-box
+      回訊息
+
+
+    -# end of #chat-list
+    
+    -# Live Reload
+    = livereload_js if ENV["RACK_ENV"] != "production"
+
