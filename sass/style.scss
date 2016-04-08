@@ -199,6 +199,11 @@ input.filter {
 
 	}
 	.message-text {
+		img {
+			max-width: 100%;
+			border-radius: $base * 0.7;
+			margin: 0.3em 0;
+		}
 		text-align: left;
 		color: black;
 		background: rgba(0,0,0,0.1);
@@ -275,7 +280,6 @@ input.filter {
 	display: flex;
 	justify-content:space-between;
 	.right-col {
-				background:green;
 		text-align: right;
 	}
 	.mid-col {

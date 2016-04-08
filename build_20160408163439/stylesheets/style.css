@@ -219,11 +219,17 @@ input.filter {
   display: inline-block;
   position: relative;
 }
-/* line 211, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
+#chat-content .message-text img {
+  max-width: 100%;
+  border-radius: 9.8px;
+  margin: 0.3em 0;
+}
+/* line 216, ../sass/style.scss */
 #chat-content .message-text .extra {
   right: -30px;
 }
-/* line 215, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 #chat-content .friend {
   display: flex;
   flex-direction: column;
@@ -231,7 +237,7 @@ input.filter {
   margin: 10px;
   text-align: right;
 }
-/* line 221, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 #chat-content .friend .message-text {
   text-align: right;
   color: white;
@@ -239,12 +245,12 @@ input.filter {
   margin: 5px;
   text-align: left;
 }
-/* line 227, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 #chat-content .friend .message-text .extra {
   left: -30px;
 }
 
-/* line 234, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 .message-box {
   position: fixed;
   height: 56px;
@@ -253,7 +259,7 @@ input.filter {
   background: white;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 241, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .message-box textarea {
   margin: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -266,7 +272,7 @@ input.filter {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 254, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 .search, .chat-title {
   height: 42px;
   line-height: 42px;
@@ -274,29 +280,28 @@ input.filter {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 261, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 .nav {
   height: 42px;
   line-height: 42px;
 }
 
-/* line 269, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .three-col {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
-/* line 270, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 .three-col > div {
   display: flex;
 }
-/* line 277, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .three-col .right-col {
-  background: green;
   text-align: right;
 }
-/* line 281, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .three-col .mid-col {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -305,7 +310,7 @@ input.filter {
   text-align: center;
 }
 
-/* line 290, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .unit {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -317,12 +322,12 @@ input.filter {
   overflow: hidden;
   height: 70px;
 }
-/* line 300, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .unit:active {
   background: rgba(34, 198, 240, 0.05);
 }
 
-/* line 305, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .content {
   margin-top: 7px;
   -webkit-flex-grow: 1;
@@ -337,7 +342,7 @@ input.filter {
   flex-direction: column;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .text {
   overflow: hidden;
   white-space: nowrap;
@@ -345,7 +350,7 @@ input.filter {
   width: 100%;
 }
 
-/* line 325, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .people {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -355,11 +360,11 @@ input.filter {
   justify-content: space-between;
 }
 
-/* line 334, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .avatar {
   float: left;
 }
-/* line 336, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 .avatar .wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -367,7 +372,7 @@ input.filter {
   height: 70px;
   width: 70px;
 }
-/* line 343, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .avatar img {
   margin: auto;
   width: 40px;
