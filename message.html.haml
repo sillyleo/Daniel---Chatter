@@ -22,10 +22,12 @@
         %a{:href => "#"} 關於「聖經好讀版」（或顯示訂單編號）
     #chat-content
       -# 聊天內容
+      -# loading 畫面，放開圖片的畫面，圖片顯示的畫面
       - 30.times do
         .me
           .message-text
             = zh_lorem_sentences(2)
+            %a{:href => "#"} http://solda.io
           .message-text
             = zh_lorem_sentences(2)
           - #.message.photo
