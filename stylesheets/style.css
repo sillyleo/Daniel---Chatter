@@ -6,50 +6,68 @@ body {
 }
 
 /* line 15, ../sass/style.scss */
+.tab {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  padding: 0 1em;
+}
+/* line 19, ../sass/style.scss */
+.tab.active {
+  color: #0b82a1;
+  border-bottom: 2px solid #0b82a1;
+}
+/* line 21, ../sass/style.scss */
+.tab.active:hover {
+  color: #22c6f0;
+  border-bottom: 2px solid #22c6f0;
+}
+
+/* line 29, ../sass/style.scss */
+.button {
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+}
+/* line 33, ../sass/style.scss */
+.button i {
+  margin: auto;
+}
+
+/* line 38, ../sass/style.scss */
 .unit a {
   color: black;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 a {
   color: #0b82a1;
   text-decoration: none;
 }
-/* line 20, ../sass/style.scss */
-a.active {
-  color: white;
-  border-radius: 3px;
-  background: #0b82a1;
-}
-/* line 24, ../sass/style.scss */
-a.active:hover {
-  color: white;
-}
-/* line 30, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 a:hover {
   color: #22C6F0;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .text {
   font-size: 12.6px;
   line-height: 21px;
   color: gray;
 }
 
-/* line 41, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .extra {
   font-size: 12.6px;
   color: #C0C0C0;
 }
 
-/* line 45, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 .timestamp {
   font-size: 11.2px;
   color: #C0C0C0;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 input.filter {
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -61,30 +79,24 @@ input.filter {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 61, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 .chat-title {
-  text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-/* line 63, ../sass/style.scss */
-.chat-title a {
-  font-size: 12.6px;
-  color: gray;
+  margin: auto;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .unit.unread {
   font-weight: bold;
 }
-/* line 74, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .unit.unread .text {
   color: black;
 }
-/* line 77, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .unit.unread .timestamp, .unit.unread .extra {
   font-weight: normal;
 }
-/* line 81, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .unit.unread .avatar img {
   -webkit-animation-name: stretch;
   animation-name: stretch;
@@ -122,7 +134,7 @@ input.filter {
     border: 1px solid white;
   }
 }
-/* line 124, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 * {
   margin: 0;
   padding: 0;
@@ -130,8 +142,36 @@ input.filter {
   outline: none;
 }
 
-/* line 133, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
+#new-message-notification {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  bottom: 80px;
+}
+/* line 151, ../sass/style.scss */
+#new-message-notification div {
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  line-height: 24px;
+  background: #22C6F0;
+  border-radius: 14px;
+  padding: 0.2em 1em 0.2em 0.5em;
+}
+/* line 155, ../sass/style.scss */
+#new-message-notification div a {
+  color: white;
+}
+/* line 161, ../sass/style.scss */
+#new-message-notification div:hover {
+  background: #52d2f3;
+}
+
+/* line 167, ../sass/style.scss */
 #chat-list.fixed {
+  z-index: 10;
   background: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -139,16 +179,17 @@ input.filter {
   top: 0;
   right: 0;
   left: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 143, ../sass/style.scss */
+/* line 179, ../sass/style.scss */
 #chat-content {
   padding: 100px 0;
   color: black;
   overflow: auto;
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 148, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 #chat-content .me {
   margin: 10px;
   text-align: left;
@@ -156,18 +197,33 @@ input.filter {
   flex-direction: column;
   align-items: flex-start;
 }
-/* line 155, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
+#chat-content .extra {
+  position: absolute;
+  bottom: 0em;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+/* line 201, ../sass/style.scss */
 #chat-content .message-text {
   text-align: left;
   color: black;
   background: rgba(0, 0, 0, 0.1);
   margin: 5px;
-  border-radius: 10px;
-  padding: 0.5em 1em;
+  border-radius: 14px;
+  padding: 0.5em 0.8em;
   max-width: 70%;
   display: inline-block;
+  position: relative;
 }
-/* line 165, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
+#chat-content .message-text .extra {
+  right: -30px;
+}
+/* line 215, ../sass/style.scss */
 #chat-content .friend {
   display: flex;
   flex-direction: column;
@@ -175,33 +231,42 @@ input.filter {
   margin: 10px;
   text-align: right;
 }
-/* line 171, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 #chat-content .friend .message-text {
   text-align: right;
   color: white;
-  background: #0ea9d1;
+  background: #0b82a1;
   margin: 5px;
   text-align: left;
 }
+/* line 227, ../sass/style.scss */
+#chat-content .friend .message-text .extra {
+  left: -30px;
+}
 
-/* line 181, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .message-box {
   position: fixed;
-  height: 42px;
+  height: 56px;
   bottom: 0;
   width: 100%;
   background: white;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 188, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .message-box textarea {
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 25.2px;
+  height: 25.2px;
+  border-radius: 3px;
+  padding: 5px;
   width: 100%;
-  background: red;
-  line-height: 1.5em;
-  padding: 0.5em 5px;
+  background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 196, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .search, .chat-title {
   height: 42px;
   line-height: 42px;
@@ -209,35 +274,38 @@ input.filter {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 203, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 .nav {
   height: 42px;
   line-height: 42px;
-  padding: 0 10px;
+}
+
+/* line 269, ../sass/style.scss */
+.three-col {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
 }
-/* line 207, ../sass/style.scss */
-.nav a {
-  padding: 0.2em 0.5em;
+/* line 270, ../sass/style.scss */
+.three-col > div {
+  display: flex;
 }
-/* line 213, ../sass/style.scss */
-.nav .right-col {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+/* line 277, ../sass/style.scss */
+.three-col .right-col {
+  background: green;
   text-align: right;
 }
-/* line 219, ../sass/style.scss */
-.nav .mid-col {
-  text-align: center;
+/* line 281, ../sass/style.scss */
+.three-col .mid-col {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  justify-content: center;
+  text-align: center;
 }
 
-/* line 228, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .unit {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -249,12 +317,12 @@ input.filter {
   overflow: hidden;
   height: 70px;
 }
-/* line 238, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .unit:active {
   background: rgba(34, 198, 240, 0.05);
 }
 
-/* line 243, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .content {
   margin-top: 7px;
   -webkit-flex-grow: 1;
@@ -269,7 +337,7 @@ input.filter {
   flex-direction: column;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .text {
   overflow: hidden;
   white-space: nowrap;
@@ -277,7 +345,7 @@ input.filter {
   width: 100%;
 }
 
-/* line 263, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .people {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -287,11 +355,11 @@ input.filter {
   justify-content: space-between;
 }
 
-/* line 272, ../sass/style.scss */
+/* line 334, ../sass/style.scss */
 .avatar {
   float: left;
 }
-/* line 274, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 .avatar .wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,7 +367,7 @@ input.filter {
   height: 70px;
   width: 70px;
 }
-/* line 281, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .avatar img {
   margin: auto;
   width: 40px;

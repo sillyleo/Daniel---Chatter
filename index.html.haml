@@ -12,18 +12,17 @@
 
   %body
     #chat-list
-      .nav
+      .nav.three-col
         .left-col
-          -# 可以過濾訊息類型
-          %a.active{:href => "#"} 全部
-          %a{:href => "#"} 買東西
-          %a{:href => "#"} 賣東西
         .mid-col
-        .right-col  
+          %a.tab.active{:href => "#"} 全部
+          %a.tab{:href => "#"} 買東西
+          %a.tab{:href => "#"} 賣東西
+      .right-col  
+      -# 示範未讀訊息
       .search
         %input.filter{:placeholder => "搜尋訂單編號", :type => "search"}/
 
-      -# 示範未讀訊息
       .unit.unread
         .avatar
           .wrapper

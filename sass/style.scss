@@ -12,19 +12,34 @@ body {
 	font-family: sans-serif;	
 }
 
+.tab {
+	color: rgba(0,0,0,0.4);
+	font-weight: bold;
+	padding: 0 1em;
+	&.active {
+		color: darken($highlight, 20%);
+		&:hover {
+			color: darken($highlight, 0%);
+			border-bottom: 2px solid darken($highlight,0%);
+		}
+		border-bottom: 2px solid darken($highlight, 20%);
+	}	
+}
+
+.button {
+	min-width: 48px;
+	display: flex;
+	justify-content: center;
+	i {
+		margin: auto;
+	}
+}
+
 .unit a {
 	color: black;
 }
 
 a {
-	&.active {
-		color: white;
-		border-radius: 3px;
-		background: darken($highlight, 20%);
-		&:hover {
-			color: white;
-		}
-	}
 	color: darken($highlight, 20%);
 	text-decoration: none;
 	&:hover {
@@ -59,12 +74,7 @@ input.filter {
 }
 
 .chat-title {
-	text-align: center;
-	a {
-		font-size: $base * 0.9;
-		color: $gray;
-	}
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	margin: auto;
 }
 
 //  未讀訊息
@@ -130,7 +140,32 @@ input.filter {
 
 // 版面
 
+#new-message-notification {
+	display: flex;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+	bottom: 80px;
+
+	div {
+		box-shadow: 0 1px 7px rgba(0,0,0,0.3);
+		margin: 0 auto;
+		line-height: 24px;
+		a {
+			color: white;
+		}
+		background: $highlight;
+		border-radius: $base;
+		padding: 0.2em 1em 0.2em 0.5em;
+		&:hover {
+			background: lighten($highlight,10%);
+		}
+	}
+}
+
 #chat-list.fixed {
+	z-index: 10;
 	background: rgba(255,255,255,0.9);
 	-webkit-backdrop-filter: blur(10px);
 	        backdrop-filter: blur(10px);
@@ -138,6 +173,7 @@ input.filter {
 	top: 0;
 	right: 0;
 	left: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 #chat-content {
@@ -152,15 +188,29 @@ input.filter {
 		flex-direction: column;
 		align-items: flex-start;
 	}
+	.extra {
+		position: absolute;
+		bottom: 0em;
+		margin: 0;
+		padding: 0;
+		font-size: 11px;
+		line-height: 15px;
+		white-space: nowrap;
+
+	}
 	.message-text {
 		text-align: left;
 		color: black;
 		background: rgba(0,0,0,0.1);
 		margin: 5px;
-		border-radius: 10px;
-		padding: 0.5em 1em;
+		border-radius: $base * 1;
+		padding: 0.5em 0.8em;
 		max-width: 70%;
 		display: inline-block;
+		position: relative;
+		.extra {
+			right: -30px;
+		}
 	}
 	.friend {
 		display: flex;
@@ -171,25 +221,33 @@ input.filter {
 		.message-text {
 			text-align: right;
 			color: white;
-			background: darken($highlight, 10%);
+			background: darken($highlight, 20%);
 			margin: 5px;
 			text-align: left;
+			.extra {
+				left: -30px;
+			}
 		}
 	}
 }
 
 .message-box {
 	position: fixed;
-	height: 3 * $base;
+	height: 4 * $base;
 	bottom: 0;
 	width: 100%;
 	background: white;
 	border-top: 1px solid rgba(0,0,0,0.1);
 	textarea {
+		margin: auto;
+		border: 1px solid rgba(0,0,0,0.1);
+		font-size: $base;
+		line-height:  $base * 1.8;
+		height: $base * 1.8;
+		border-radius: 3px;
+		padding: 5px;
 		width: 100%;
-		background: red;
-		line-height: 1.5em;
-		padding: 0.5em 5px;
+		background: rgba(0,0,0,0.05);
 	}
 }
 
@@ -197,33 +255,37 @@ input.filter {
 	height: 3 * $base;
 	line-height: 3 * $base;
 	padding: 0 10px;
-	border-top: 1px solid rgba(0,0,0,0.1);
+	border-top:1px solid rgba(0,0,0,0.1);
 }
 
 .nav {
   height: 3 * $base;
 	line-height: 3 * $base;
-	padding: 0 10px;
-	a {
-		padding: 0.2em 0.5em;
+
+}
+
+// 三欄伸縮排版
+
+.three-col {
+	& > div {
+		display: flex;
 	}
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	justify-content:space-between;
 	.right-col {
-		-webkit-flex-grow: 1;
-		    -ms-flex-positive: 1;
-		        flex-grow: 1;
+				background:green;
 		text-align: right;
 	}
 	.mid-col {
-		text-align: center;
 		-webkit-flex-grow: 1;
 		    -ms-flex-positive: 1;
 		        flex-grow: 1;
+		justify-content: center;
+		text-align:center;
 	}
 }
-
 
 .unit {
 	-webkit-user-select: none;

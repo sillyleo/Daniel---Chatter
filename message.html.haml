@@ -11,35 +11,65 @@
     %link{ :rel => "stylesheet", :href => "stylesheets/style.css"}/
 
   %body
+
+    #new-message-notification
+      %div
+        %a.button{:href => "/"}
+          %i.material-icons expand_more
+          新訊息
+
     #chat-list.fixed
-      .nav
+      .nav.three-col
         .left-col
           -# 可以過濾訊息類型
-          %a{:href => "/"} 回上頁
+          %a.button{:href => "/"}
+            %i.material-icons arrow_back
         .mid-col
+          .chat-title
+            %a{:href => "#"} 關於「聖經好讀版」（或顯示訂單編號）
         .right-col  
-      .chat-title
-        %a{:href => "#"} 關於「聖經好讀版」（或顯示訂單編號）
+      
     #chat-content
-      -# 聊天內容
-      -# loading 畫面，放開圖片的畫面，圖片顯示的畫面
       - 30.times do
         .me
           .message-text
             = zh_lorem_sentences(2)
-            %a{:href => "#"} http://solda.io
+            %a{:href => "#"} http://example.com
+            .extra
+              7/3 
+              %br 已讀
           .message-text
             = zh_lorem_sentences(2)
+            .extra
+              7/3 
+              %br 已讀 
           - #.message.photo
 
         .friend
           .message-text
             = zh_lorem_sentences(2)
+            .extra
+              7/3 
+              %br 已讀  
           .message-text
             = zh_lorem_sentences(1)
+            .extra
+              7/3 
+              %br 已讀 
           - #.message-photo
-    .message-box
-      %textarea
+          .me
+          .message-text
+            [ 圖片傳送中 ]
+            .extra
+              7/3 
+              %br 已讀
+
+    .message-box.three-col
+      %a.button{:href => "/"}
+        %i.material-icons attach_file
+      %textarea{:placeholder => "訊息"}
+      %a.button{:href => "/"}
+        %i.material-icons send
 
 
     -# end of #chat-list
