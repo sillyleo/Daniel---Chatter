@@ -18,11 +18,15 @@
           %a.tab.active{:href => "#"} 全部
           %a.tab{:href => "#"} 買東西
           %a.tab{:href => "#"} 賣東西
-      .right-col  
+        .right-col  
+          %a.button{:href => "/"}
+            %i.material-icons keyboard_arrow_down
+
       -# 示範未讀訊息
       .search
         %input.filter{:placeholder => "搜尋訂單編號", :type => "search"}/
 
+    .chat-content
       .unit.unread
         .avatar
           .wrapper
@@ -37,7 +41,6 @@
           .text
             = zh_lorem_sentences(2)
           .extra 訂單 #12345
-      -# 示範未讀訊息
       .unit.unread
         .avatar
           .wrapper

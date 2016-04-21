@@ -3,13 +3,14 @@
 $base: 14px;
 $gray: gray;
 $light: #C0C0C0;
-$highlight: #22C6F0;
+$highlight: rgba(255, 81, 109, 1);
 
 // 字型
 body {
 	line-height: $base * 1.4;
 	font-size: $base;
-	font-family: sans-serif;	
+	font-family: sans-serif;
+	background: white;
 }
 
 .tab {
@@ -178,9 +179,10 @@ input.filter {
 
 #chat-content {
 	padding: 100px 0;
+	box-sizing: border-box;
+	height: 100;
 	color: black;
 	overflow: auto;
-	background: rgba(0,0,0,0.05);
 	.me {
 		margin: 10px;
 		text-align: left;
@@ -278,6 +280,7 @@ input.filter {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
 	justify-content:space-between;
 	.right-col {
 		text-align: right;
