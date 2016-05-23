@@ -198,7 +198,7 @@ input.filter {
 		font-size: 11px;
 		line-height: 15px;
 		white-space: nowrap;
-
+		width: 80px;
 	}
 	.message-text {
 		img {
@@ -216,7 +216,7 @@ input.filter {
 		display: inline-block;
 		position: relative;
 		.extra {
-			right: -30px;
+			right: -90px;
 		}
 	}
 	.friend {
@@ -232,7 +232,8 @@ input.filter {
 			margin: 5px;
 			text-align: left;
 			.extra {
-				left: -30px;
+				left: -90px;
+				text-align: right;
 			}
 		}
 	}
