@@ -228,6 +228,8 @@ input.filter {
 #chat-content .message-text {
   text-align: left;
   color: black;
+  white-space: normal;
+  word-wrap: break-word;
   background: rgba(0, 0, 0, 0.1);
   margin: 5px;
   border-radius: 14px;
@@ -242,11 +244,11 @@ input.filter {
   border-radius: 9.8px;
   margin: 0.3em 0;
 }
-/* line 231, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 #chat-content .message-text .extra {
   right: -90px;
 }
-/* line 235, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 #chat-content .friend {
   display: flex;
   flex-direction: column;
@@ -254,7 +256,7 @@ input.filter {
   margin: 10px;
   text-align: right;
 }
-/* line 241, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 #chat-content .friend .message-text {
   text-align: right;
   color: white;
@@ -262,13 +264,13 @@ input.filter {
   margin: 5px;
   text-align: left;
 }
-/* line 247, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 #chat-content .friend .message-text .extra {
   left: -90px;
   text-align: right;
 }
 
-/* line 255, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 .message-box {
   position: fixed;
   height: 56px;
@@ -277,9 +279,10 @@ input.filter {
   background: white;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 262, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 .message-box textarea {
   margin: auto;
+  word-wrap: break-word;
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 14px;
   line-height: 25.2px;
@@ -290,7 +293,7 @@ input.filter {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 275, ../sass/style.scss */
+/* line 278, ../sass/style.scss */
 .search, .chat-title {
   height: 42px;
   line-height: 42px;
@@ -298,13 +301,13 @@ input.filter {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 282, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .nav {
   height: 42px;
   line-height: 42px;
 }
 
-/* line 290, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 .three-col {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -312,15 +315,15 @@ input.filter {
   flex-direction: row;
   justify-content: space-between;
 }
-/* line 291, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .three-col > div {
   display: flex;
 }
-/* line 299, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .three-col .right-col {
   text-align: right;
 }
-/* line 302, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .three-col .mid-col {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -329,7 +332,7 @@ input.filter {
   text-align: center;
 }
 
-/* line 311, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .unit {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -341,12 +344,12 @@ input.filter {
   overflow: hidden;
   height: 70px;
 }
-/* line 321, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .unit:active {
   background: rgba(34, 198, 240, 0.05);
 }
 
-/* line 326, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .content {
   margin-top: 7px;
   -webkit-flex-grow: 1;
@@ -361,7 +364,7 @@ input.filter {
   flex-direction: column;
 }
 
-/* line 340, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .text {
   overflow: hidden;
   white-space: nowrap;
@@ -369,7 +372,7 @@ input.filter {
   width: 100%;
 }
 
-/* line 346, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .people {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,11 +382,11 @@ input.filter {
   justify-content: space-between;
 }
 
-/* line 355, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .avatar {
   float: left;
 }
-/* line 357, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .avatar .wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -391,7 +394,7 @@ input.filter {
   height: 70px;
   width: 70px;
 }
-/* line 364, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .avatar img {
   margin: auto;
   width: 40px;
