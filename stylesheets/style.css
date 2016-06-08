@@ -1,4 +1,50 @@
-/* line 9, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+/* line 18, ../sass/style.scss */
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1b88e5;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+/* line 32, ../sass/style.scss */
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* line 53, ../sass/style.scss */
 body {
   line-height: 19.6px;
   font-size: 14px;
@@ -6,24 +52,24 @@ body {
   background: white;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 .tab {
   color: rgba(0, 0, 0, 0.4);
   font-weight: bold;
   padding: 0 1em;
 }
-/* line 20, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .tab.active {
   color: #10528a;
   border-bottom: 2px solid #10528a;
 }
-/* line 22, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .tab.active:hover {
   color: #1b88e5;
   border-bottom: 2px solid #1b88e5;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 sup {
   font-size: 10px;
   color: white;
@@ -37,52 +83,52 @@ sup {
   font-weight: bold;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .button {
   min-width: 48px;
   display: flex;
   justify-content: center;
 }
-/* line 47, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .button i {
   margin: auto;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .unit a {
   color: black;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 a {
   color: #10528a;
   text-decoration: none;
 }
-/* line 59, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 a:hover {
   color: #1b88e5;
 }
 
-/* line 64, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .text {
   font-size: 12.6px;
   line-height: 21px;
   color: gray;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .extra {
   font-size: 12.6px;
   color: #C0C0C0;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .timestamp {
   font-size: 11.2px;
   color: #C0C0C0;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 input.filter {
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -94,24 +140,24 @@ input.filter {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 90, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .chat-title {
   margin: auto;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .unit.unread {
   font-weight: bold;
 }
-/* line 98, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .unit.unread .text {
   color: black;
 }
-/* line 101, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .unit.unread .timestamp, .unit.unread .extra {
   font-weight: normal;
 }
-/* line 105, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .unit.unread .avatar img {
   -webkit-animation-name: stretch;
   animation-name: stretch;
@@ -149,7 +195,7 @@ input.filter {
     border: 1px solid white;
   }
 }
-/* line 148, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 * {
   margin: 0;
   padding: 0;
@@ -157,7 +203,7 @@ input.filter {
   outline: none;
 }
 
-/* line 157, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 #new-message-notification {
   display: flex;
   text-align: center;
@@ -166,7 +212,7 @@ input.filter {
   z-index: 2;
   bottom: 80px;
 }
-/* line 165, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 #new-message-notification div {
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
@@ -175,16 +221,16 @@ input.filter {
   border-radius: 14px;
   padding: 0.2em 1em 0.2em 0.5em;
 }
-/* line 169, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 #new-message-notification div a {
   color: white;
 }
-/* line 175, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 #new-message-notification div:hover {
   background: #49a0ea;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 #chat-list.fixed {
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
@@ -197,7 +243,7 @@ input.filter {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 193, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 #chat-content {
   padding: 100px 0;
   box-sizing: border-box;
@@ -205,7 +251,7 @@ input.filter {
   color: black;
   overflow: auto;
 }
-/* line 199, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 #chat-content .me {
   margin: 10px;
   text-align: left;
@@ -213,7 +259,7 @@ input.filter {
   flex-direction: column;
   align-items: flex-start;
 }
-/* line 206, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 #chat-content .extra {
   position: absolute;
   bottom: 0em;
@@ -224,7 +270,7 @@ input.filter {
   white-space: nowrap;
   width: 80px;
 }
-/* line 216, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 #chat-content .message-text {
   text-align: left;
   color: black;
@@ -238,17 +284,17 @@ input.filter {
   display: inline-block;
   position: relative;
 }
-/* line 217, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 #chat-content .message-text img {
   max-width: 100%;
   border-radius: 9.8px;
   margin: 0.3em 0;
 }
-/* line 233, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 #chat-content .message-text .extra {
   right: -90px;
 }
-/* line 237, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 #chat-content .friend {
   display: flex;
   flex-direction: column;
@@ -256,7 +302,7 @@ input.filter {
   margin: 10px;
   text-align: right;
 }
-/* line 243, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 #chat-content .friend .message-text {
   text-align: right;
   color: white;
@@ -264,13 +310,13 @@ input.filter {
   margin: 5px;
   text-align: left;
 }
-/* line 249, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 #chat-content .friend .message-text .extra {
   left: -90px;
   text-align: right;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 301, ../sass/style.scss */
 .message-box {
   position: fixed;
   height: 56px;
@@ -279,7 +325,7 @@ input.filter {
   background: white;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 264, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .message-box textarea {
   margin: auto;
   word-wrap: break-word;
@@ -293,7 +339,7 @@ input.filter {
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 278, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .search, .chat-title {
   height: 42px;
   line-height: 42px;
@@ -301,13 +347,13 @@ input.filter {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 285, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .nav {
   height: 42px;
   line-height: 42px;
 }
 
-/* line 293, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .three-col {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -315,15 +361,15 @@ input.filter {
   flex-direction: row;
   justify-content: space-between;
 }
-/* line 294, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .three-col > div {
   display: flex;
 }
-/* line 302, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 .three-col .right-col {
   text-align: right;
 }
-/* line 305, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .three-col .mid-col {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -332,7 +378,7 @@ input.filter {
   text-align: center;
 }
 
-/* line 314, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .unit {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -344,12 +390,12 @@ input.filter {
   overflow: hidden;
   height: 70px;
 }
-/* line 324, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .unit:active {
   background: rgba(34, 198, 240, 0.05);
 }
 
-/* line 329, ../sass/style.scss */
+/* line 373, ../sass/style.scss */
 .content {
   margin-top: 7px;
   -webkit-flex-grow: 1;
@@ -364,7 +410,7 @@ input.filter {
   flex-direction: column;
 }
 
-/* line 343, ../sass/style.scss */
+/* line 387, ../sass/style.scss */
 .text {
   overflow: hidden;
   white-space: nowrap;
@@ -372,7 +418,7 @@ input.filter {
   width: 100%;
 }
 
-/* line 349, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 .people {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -382,11 +428,11 @@ input.filter {
   justify-content: space-between;
 }
 
-/* line 358, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 .avatar {
   float: left;
 }
-/* line 360, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 .avatar .wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -394,7 +440,7 @@ input.filter {
   height: 70px;
   width: 70px;
 }
-/* line 367, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 .avatar img {
   margin: auto;
   width: 40px;
