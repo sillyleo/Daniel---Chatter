@@ -1,0 +1,55 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => "utf-8" }/
+    %title 聊天列表介面
+    %meta{ :name => "description", :content => "" }/
+    %meta{ :name => "author", :content => "" }/
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+    / material icons
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    %link{:href => "https://code.getmdl.io/1.1.3/material.indigo-pink.min.css", :rel => "stylesheet"}/
+    %script{:defer => "defer", :src => "https://code.getmdl.io/1.1.3/material.min.js"}
+    %link{ :rel => "stylesheet", :href => "stylesheets/style.css"}/
+
+  %body
+    #chat-list
+      .nav.three-col
+        .left-col
+          %a.button{:href => "/"}
+            %i.material-icons close
+        .mid-col
+          %a.tab{:href => "/"}
+            訊息
+            %sup 4
+          %a.tab.active{:href => "notification.html"}
+            通知
+            %sup 4
+        .right-col  
+          %a.button{:href => "/"}
+            %i.material-icons  
+
+      -# 示範未讀訊息
+      .search
+        %input.filter{:placeholder => "搜尋", :type => "search"}/
+
+    .chat-content
+      - 8.times do
+        .unit.unread.notification
+          %a.content{:href => "message.html"}
+            .text 
+              = zh_lorem_sentences(2)
+            .extra
+              = lorem_date("%m/%d")
+
+      .unit.unread.notification
+        %a.content{:href => "message.html"}
+          .text 
+            顯示全部通知...
+
+
+    -# end of #chat-list
+    
+    -# Live Reload
+    = livereload_js if ENV["RACK_ENV"] != "production"
+
