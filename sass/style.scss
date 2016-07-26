@@ -50,6 +50,7 @@ $highlight: #1b88e5;
 }
 
 // 字型
+
 body {
 	line-height: $base * 1.4;
 	font-size: $base;
@@ -219,6 +220,17 @@ input.filter {
 }
 
 // 版面
+
+.clear {
+	clear: both;
+	overflow: auto;
+	display: block;
+	width: 100%;
+}
+
+#content {
+	padding: 64px 16px;
+}
 
 #new-message-notification {
 	display: flex;
