@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<g>
+	<rect x="36" y="24" fill="#CFD8DC" width="2" height="16"/>
+	<rect x="10" y="24" fill="#CFD8DC" width="2" height="16"/>
+	<rect x="3" y="31" fill="#CFD8DC" width="16" height="2"/>
+	
+		<rect x="10" y="24" transform="matrix(-0.707 -0.7072 0.7072 -0.707 -3.8541 62.4022)" fill="#CFD8DC" width="2.001" height="15.999"/>
+	
+		<rect x="10" y="24" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 41.4061 46.8481)" fill="#CFD8DC" width="2.001" height="16"/>
+	<rect x="29" y="31" fill="#CFD8DC" width="16" height="2"/>
+	
+		<rect x="35.999" y="24" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 40.5359 80.7895)" fill="#CFD8DC" width="2.001" height="15.999"/>
+	
+		<rect x="36" y="24" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 85.7909 28.4633)" fill="#CFD8DC" width="2.001" height="16"/>
+</g>
+<g>
+	<circle fill="none" stroke="#607D8B" stroke-width="2" cx="11" cy="32" r="8"/>
+	<circle fill="none" stroke="#607D8B" stroke-width="2" cx="37" cy="32" r="8"/>
+</g>
+<g>
+	<path fill="none" stroke="#F50057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M35,8c-1.72,2.58-6,2-6,2s2,11,8,22"/>
+	
+		<polygon fill="none" stroke="#F50057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		23,32 11,32 17,18 31,18 31,19 	"/>
+	
+		<line fill="none" stroke="#F50057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16" y1="14" x2="23" y2="32"/>
+</g>
+<path fill="#455A64" d="M35.555,7.168c-0.461-0.307-1.082-0.182-1.387,0.277c-0.559,0.837-1.511,1.246-2.438,1.443l0.484,1.937
+	c1.316-0.292,2.723-0.929,3.617-2.271C36.139,8.095,36.014,7.475,35.555,7.168z"/>
+<g>
+	<circle fill="#AD1457" cx="23" cy="33" r="3"/>
+	<circle fill="#AD1457" cx="11" cy="32" r="2"/>
+	<polygon fill="#AD1457" points="23,30 11,30 11,34 23,36 	"/>
+</g>
+<path fill="#880E4F" d="M20,13c-3,0-5,2-6.5,2S12,13.5,12,13.5v-1c0-0.828,0.671-1.5,1.5-1.5H20c0,0,1,0,1,1C21,12,21,13,20,13z"/>
+</svg>

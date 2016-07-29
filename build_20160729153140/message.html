@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>聊天列表介面</title>
+    <meta content='' name='description'>
+    <meta content='' name='author'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <!-- material icons -->
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='stylesheets/style.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div id='new-message-notification'>
+      <div>
+        <a class='button' href='/'>
+          <i class='material-icons'>expand_more</i>
+          新訊息
+        </a>
+      </div>
+    </div>
+    <div class='fixed' id='chat-list'>
+      <div class='nav three-col'>
+        <div class='left-col'>
+          <a class='button' href='/'>
+            <i class='material-icons'>arrow_back</i>
+          </a>
+        </div>
+        <div class='mid-col'>
+          <div class='chat-title'>
+            <a href='#'>關於「聖經好讀版」（或顯示訂單編號）</a>
+          </div>
+        </div>
+        <div class='right-col'>
+          <a class='button' href='/'>
+            <i class='material-icons'>keyboard_arrow_down</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id='chat-content'>
+      <div class='spinner'>
+        <div class='double-bounce1'></div>
+        <div class='double-bounce2'></div>
+      </div>
+      <div class='me'>
+        <div class='message-text'>
+          甘失掉了麵皮！就再開始。
+          <a href='#'>http://example.com</a>
+          <div class='extra'>
+            12/21 09:00
+            <br>已讀</br>
+          </div>
+        </div>
+        <div class='message-text'>
+          當科白尼還未出世，最適合中國人。那纔利害啦！
+          <div class='extra'>
+            1/1 1:11
+            <br>已讀</br>
+          </div>
+        </div>
+        <div class='message-text photo'>
+          <img src='img/products/p7.jpg'>
+          <div class='extra'>
+            7/3
+            <br>已讀</br>
+          </div>
+        </div>
+      </div>
+      <div class='friend'>
+        <div class='message-text'>
+          將要千圓。上了一課，喝杯咖啡。
+          <div class='extra'>
+            7/3
+            <br>已讀</br>
+          </div>
+        </div>
+        <div class='message-text'>
+          值得說什麼爭麵皮！
+          <div class='extra'>
+            12/21 09:00
+            <br>已讀</br>
+          </div>
+        </div>
+        <div class='me'></div>
+        <div class='message-text'>
+          [ 圖片傳送中 ]
+          <div class='extra'>
+            1/1 1:11
+            <br>已讀</br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='message-box three-col'>
+      <a class='button' href='/'>
+        <i class='material-icons'>attach_file</i>
+      </a>
+      <textarea placeholder='訊息'></textarea>
+      <a class='button' href='/'>
+        <i class='material-icons'>send</i>
+      </a>
+    </div>
+    
+  </body>
+</html>
