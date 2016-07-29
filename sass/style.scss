@@ -5,6 +5,27 @@ $gray: gray;
 $light: #C0C0C0;
 $highlight: #1b88e5;
 
+
+// basic style
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 1em;
+}
+
+input {
+	border: 1px solid lighten($gray, 20%);
+	padding: 0.6em;
+	border-radius: 2px;
+	font-size: $base;
+}
+
+// gray
+
+.caption {
+	font-size: $base - 2px;
+	color: $gray;
+}
+
 // spinner
 
 .spinner {
